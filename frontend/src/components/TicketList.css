@@ -1,0 +1,79 @@
+.ticket-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 20px auto; /* Added margin for spacing */
+}
+
+.ticket-list-item {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.ticket-list-item:hover {
+  transform: scale(1.02); /* Subtle scaling effect on hover */
+}
+
+.ticket-list-item h2 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #4a90e2;
+}
+
+.ticket-list-item p {
+  margin: 8px 0;
+  color: #666;
+  line-height: 1.5; /* Improved line spacing for readability */
+}
+
+.ticket-list-item .status {
+  font-weight: bold;
+  text-transform: uppercase; /* Make status uppercase for emphasis */
+}
+
+.status-pending {
+  color: orange;
+}
+
+.status-accepted {
+  color: green;
+}
+
+.status-resolved {
+  color: blue;
+}
+
+.status-rejected {
+  color: red;
+}
+
+.ticket-list-item p:last-child {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* Styling for filter and sort options */
+.filter-sort-options {
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for better alignment */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Center align items vertically */
+}
+
+.filter-sort-options select {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px; /* Add border radius for consistency */
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease; /* Transition for border on focus */
+}
+
+.filter-sort-options select:focus {
+  border-color: #4a90e2; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}

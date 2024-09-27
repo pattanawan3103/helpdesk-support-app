@@ -1,0 +1,126 @@
+.ticket-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  width: 80%; /* Adjust to fit within the viewport */
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-form:hover {
+  transform: scale(1.02);
+}
+
+.ticket-form h5 {
+  margin-bottom: 20px;
+  font-size: 2em; /* ปรับขนาดให้ใหญ่ขึ้น */
+  color: #4a90e2;
+  text-align: center;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.ticket-form h5:hover {
+  color: #357ab7;
+}
+
+.ticket-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ticket-form label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.ticket-form input,
+.ticket-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition สำหรับ box-shadow */
+}
+
+.ticket-form input:focus,
+.ticket-form textarea:focus {
+  border: 1px solid #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.ticket-form button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.ticket-form button:hover::before {
+  transform: translateY(0);
+}
+
+.ticket-form button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* เพิ่ม media query สำหรับหน้าจอที่เล็กลง */
+@media (max-width: 600px) {
+  .ticket-form {
+    padding: 20px;
+    width: 95%; /* Adjust for smaller devices */
+  }
+
+  .ticket-form h5 {
+    font-size: 1.8em; /* ปรับขนาดให้เล็กลง */
+  }
+
+  .ticket-form input,
+  .ticket-form textarea {
+    font-size: 14px; /* ปรับขนาดให้เล็กลง */
+  }
+
+  .ticket-form button {
+    font-size: 16px; /* ปรับขนาดให้เล็กลง */
+  }
+}
